@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="ToDo-styles/ToDo.css" rel="stylesheet">
+
+
+</head>
+
+<body class="body">
+    <div class="header">
+        <input id="text-bar" placeholder="Write Your Task...." type="text">
+        <input id="due-date" type="date">
+        <button onclick="addToDoInArray()" class="addTodo">Add-ToDo</button>
+    </div>
+    <div class="paragraphDiv">
+        <p class="paraAboutTask"><span class="taskSpan">About :</span> Task is a piece of work that has to be done,
+            especially an unpleasant or difficult one</p>
+    </div>
+    <div class="sideBar">
+        <img src="pics/list-concept-illustration_114360-1320.webp" class="taskImage">
+    </div>
+
+
+    <div id="rendering-div"></div>
+
+    <script>
+        let listofTask = [];
+        function addToDoInArray() {
+            let texts = document.getElementById('text-bar');
+            let task = texts.value;
+            let datePickers = document.getElementById('due-date');
+            let datePicker = datePickers.value;
+            let id = '' + new Date().getTime();
+            console.log(task + datePicker + id);
+            let infoAboutTask = {
+                task: task,
+                dueDate: datePicker,
+                id: id
+            }
+            listofTask.push(infoAboutTask);
+            texts.value = "";
+            datePickers.value = "";
+            id = "";
+            addelementInArray();
+        }
+        function addelementInArray() {
+            document.getElementById('rendering-div').innerHTML = "";
+            listofTask.forEach((objekts) => {
+                let element1 = document.createElement('div');
+                element1.className = "taskClass";
+                let textDiv = document.createElement('div');
+                textDiv.innerText = 'Task:' + ' ' + objekts.task;
+                textDiv.id = "taskdiv";
+                element1.appendChild(textDiv);
+                let dueDateDiv = document.createElement('div');
+                dueDateDiv.innerText = 'Due-Date:' + ' ' + objekts.dueDate;
+                dueDateDiv.id = "duedatediv";
+                element1.appendChild(dueDateDiv);
+                let element2 = document.createElement('button');
+                element2.innerText = "Delete";
+                element2.id = objekts.id;
+                element2.className = "button";
+                element2.onclick = deleteTheTask;
+                element1.appendChild(element2);
+                let renderingDiv = document.getElementById('rendering-div');
+                renderingDiv.appendChild(element1);
+            })
+        }
+        function deleteTheTask(event) {
+            let deleteButton = event.target;
+            let idToDelete = deleteButton.id;
+            listofTask = listofTask.filter((objects) => {
+                if (objects.id === idToDelete) {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            });
+            console.log(listofTask);
+            addelementInArray();
+        }
+
+
+
+    </script>
+</body>
+
+</html>

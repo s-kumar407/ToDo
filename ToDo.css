@@ -1,0 +1,163 @@
+#text-bar {
+    width: 1000px;
+    height: 50px;
+    border-radius: 18px;
+    border: 1px;
+    border-color: rgb(171, 170, 170);
+    border-style: solid;
+    padding-left: 20px;
+    margin-left: 8px;
+}
+
+#due-date {
+    width: 280px;
+    height: 53px;
+    border-radius: 18px;
+    border: 1px;
+    border-color: rgb(171, 170, 170);
+    border-style: solid;
+}
+
+.addTodo {
+    width: 120px;
+    height: 54px;
+    border-radius: 18px;
+    border: 3px;
+    border-color: rgb(171, 170, 170);
+    border-style: solid;
+    margin-right: 7px;
+    background-color: white;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    border-bottom: 1px;
+    border-bottom-color: rgb(218, 218, 218);
+    border-bottom-style: solid;
+    padding-bottom: 4px;
+    padding-top: 4px;
+
+}
+
+#rendering-div {
+    margin-top: 70px;
+    width: 1010px;
+}
+
+.body {
+    height: 3000px;
+    background-color: black;
+}
+
+.button {
+    width: 100px;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    height: 67px;
+    border-radius: 18px;
+    border: 3px;
+    border-color: white;
+    border-style: solid;
+    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+.taskClass {
+    width: 1020px;
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-radius: 50px;
+}
+
+#taskdiv {
+    height: 50px;
+    width: 650px;
+    padding-top: 12px;
+    padding-left: 25px;
+    border: 3px;
+    border-color: white;
+    background-color: yellow;
+    border-style: solid;
+    color: black;
+    border-radius: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#duedatediv {
+    width: 200px;
+    height: 50px;
+    padding-top: 12px;
+    padding-left: 25px;
+    border: 3px;
+    border-color: white;
+    color: black;
+    background-color: yellow;
+    border-style: solid;
+    border-radius: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.sideBar {
+    position: fixed;
+    top: 280px;
+    right: 0px;
+    height: 400px;
+    width: 450px;
+    background-color: grey;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.taskImage {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.paraAboutTask {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin: 10px;
+}
+
+.taskSpan {
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.paragraphDiv {
+    position: fixed;
+    top: 70;
+    right: 0;
+    height: 200px;
+    width: 450px;
+    background-color: grey;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+#due-date{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    
+}
